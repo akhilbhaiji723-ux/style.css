@@ -1,0 +1,145 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./ctaimage/backimages.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+
+
+
+
+.about-institute {
+    width: 100%;
+    padding: 70px 20px;
+}
+
+
+
+.about-content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 45px;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+
+.about-content h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+
+
+.about-content h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+/* Paragraph */
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+
+
+.about-content h3 {
+    color: #e70e0e;
+    font-size: 21px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.course-list span {
+    padding: 10px 20px;
+    background: #e8efff;
+    color: #000000;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+
+.about-content ul {
+    padding-left: 22px;
+}
+
+.about-content li {
+    margin-bottom: 10px;
+    color: #000000;
+    line-height: 1.5;
+}
+
+
+
+.admission-btn {
+    margin-top: 25px;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 7px;
+    background: #1d4ed8;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admission-btn:hover {
+    background: #153eaa;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .about-institute {
+        padding: 40px 15px;
+    }
+
+    .about-content {
+        padding: 25px 20px;
+    }
+
+    .about-content h1 {
+        font-size: 29px;
+    }
+
+    .about-content h2 {
+        font-size: 21px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+
+    .course-list span {
+        padding: 8px 14px;
+    }
+}

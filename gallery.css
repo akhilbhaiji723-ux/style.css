@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.n {
+    background: #e2e6e9;
+    border-radius: 25px;
+    padding: 10px 10px;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+
+
+.gallery {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: clamp(50px, 6vw, 100px)
+             clamp(20px, 7vw, 120px);
+
+    background: #f6fbff;
+}
+
+
+
+.gallery-container {
+    width: min(100%, 1400px);
+    margin: auto;
+}
+
+
+
+
+.gallery-heading {
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.gallery-heading span {
+    display: inline-block;
+
+    font-size: clamp(13px, 1vw, 16px);
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #007bff;
+}
+
+.gallery-heading h1 {
+    margin: 12px 0 15px;
+
+    font-size: clamp(28px, 3.2vw, 50px);
+
+    line-height: 1.2;
+
+    color: #222;
+    color: #222;
+    background: #cddbd5;
+    padding: 10px 20px;
+    border-radius: 10px; 
+}
+
+.gallery-heading p {
+    font-size: clamp(14px, 1.1vw, 17px);
+
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: clamp(15px, 1.5vw, 25px);
+}
+
+
+
+
+.gallery-item {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #ddd;
+
+    cursor: pointer;
+}
+
+
+
+
+.gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+
+
+.gallery-item::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+
+
+
+@media (max-width: 1000px) {
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+
+
+@media (max-width: 750px) {
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+
+
+@media (max-width: 500px) {
+
+    .gallery {
+        padding: 50px 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
